@@ -1,23 +1,40 @@
 package com.senai.aula01_introducaoPOO.exemplos.pessoa;
 
 public class Pessoa {
+    // Se a agrupam os dados na classe
+
+    // Atributos
     String nome;
     int idade;
     float altura;
-    String endereco;
+    Endereco endereco;
 
-    //o construtor é sempre público e tem o mesmo nome da classe
-    public Pessoa(String nome, int idade){
+    // Reserva um espaço na memória e solicita as informações dos atributos caso for pedido.
+    // O construtor é sempre público e tem o mesmo nome da classe. Não precisa de retorno.
+    public Pessoa(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
     }
 
+    public Pessoa(int idade, Endereco endereco , float altura, String nome) {
+        this.idade = idade;
+        this.endereco = endereco;
+        this.altura = altura;
+        this.nome = nome;
+    }
+
+    // Métodos
     public void falar(String frase) {
-        System.out.println("A pessoa falou: " + frase);
+        System.out.println(nome + " falou " + frase);
     }
 
     public void comer(String alimento) {
-        System.out.println("A pessoa comeu " + alimento);
+        System.out.println(nome + " comeu " + alimento);
     }
 
+    @Override
+    // o ToString pega o conteúdo das váriaveis para mostrá-las
+    public String toString() {
+        return "O nome da pessoa é " + this.nome + ", tem " + this.idade + " anos de idade, " + this.altura + " de altura e mora no endereço " + this.endereco;
+    }
 }
