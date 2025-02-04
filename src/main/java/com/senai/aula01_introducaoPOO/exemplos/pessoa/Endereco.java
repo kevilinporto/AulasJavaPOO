@@ -8,9 +8,9 @@ public class Endereco {
     String estado;
 
     // Constructor
-    public Endereco(int numero, String rua, String bairro, String cidade, String estado) {
-        this.numero = numero;
+    public Endereco(String rua, int numero, String bairro, String cidade, String estado) {
         this.rua = rua;
+        this.numero = numero;
         this.bairro = bairro;
         this.cidade = cidade;
         this.estado = estado;

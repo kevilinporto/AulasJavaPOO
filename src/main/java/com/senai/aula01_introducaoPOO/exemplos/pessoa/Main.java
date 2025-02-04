@@ -1,22 +1,36 @@
 package com.senai.aula01_introducaoPOO.exemplos.pessoa;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         // O new cria um novo objeto e atribui um endereço à variável
         Pessoa pessoa1 = new Pessoa("Vitoria", 18);
+        Scanner scanner = new Scanner(System.in);
+        String cabecalho[] = {"Nome: ", "Idade: ", "Altura: ", "Endereço: \n\trua: ", "\tnumero: ",
+                "\tbairro: ", "\t cidade: ", "\testado: "};
 
+        //Array para armazenar os dados preenchidos pelo usuário
+        String[] dados = new String[8];
+
+        System.out.println("Preencha os dados a seguir: ");
+        for (int i = 0; i < cabecalho.length; i++) {
+            //Este sout escreve na tela cada elemento de String[] cabecalho
+            System.out.print(cabecalho[i]);
+            dados[i] = scanner.nextLine();
+        }
         Pessoa pessoa2 = new Pessoa(
-                18,
+                dados[0], //nome
+                Integer.parseInt(dados[1]), //idade
+                Float.parseFloat(dados[2]), //altura
                 new Endereco(
-                        203,
-                        "Brigadeiro Luís Antônio",
-                        "Bela Vista",
-                        "São Paulo",
-                        "SP"
-                ),
-                1.67f,
-                "Kevilin");
-
+                        dados[3], //rua
+                        Integer.parseInt(dados[4]), //numero
+                        dados[5], //bairro
+                        dados[6], //cidade
+                        dados[7] //estado
+                )
+        );
 
 
         System.out.println(pessoa1);

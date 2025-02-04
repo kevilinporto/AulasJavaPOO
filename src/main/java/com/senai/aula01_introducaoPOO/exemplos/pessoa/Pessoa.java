@@ -16,9 +16,9 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public Pessoa(int idade, Endereco endereco , float altura, String nome) {
-        this.idade = idade;
+    public Pessoa(String nome, int idade, float altura, Endereco endereco ) {
         this.endereco = endereco;
+        this.idade = idade;
         this.altura = altura;
         this.nome = nome;
     }
