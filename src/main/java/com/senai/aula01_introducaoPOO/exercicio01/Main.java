@@ -18,7 +18,7 @@ public class Main {
                         |              MENU              |
                         | 1 - Exibir detalhes            |
                         | 2 - Atualizar estoque          |
-                        | 3 - Calcular valor de estoque  | 
+                        | 3 - Calcular valor de estoque  |
                         | 4 - Sair                       |
                         """);
 
