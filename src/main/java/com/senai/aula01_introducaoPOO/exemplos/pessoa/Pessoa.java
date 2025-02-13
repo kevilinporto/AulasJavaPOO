@@ -4,7 +4,7 @@ public class Pessoa {
     // Se a agrupam os dados na classe
 
     // Atributos
-    String nome;
+    public String nome;
     int idade;
     float altura;
     Endereco endereco;
