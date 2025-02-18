@@ -43,6 +43,8 @@ public class Main {
         Pessoa pessoa = (Pessoa) lista.get(3);
         pessoa.falar("teste");
 
+
+        // ArrayList com um tipo definido
         ArrayList<Pessoa> listaPessoas = new ArrayList<>();
 
         listaPessoas.add(pessoa1); // variável já criada
