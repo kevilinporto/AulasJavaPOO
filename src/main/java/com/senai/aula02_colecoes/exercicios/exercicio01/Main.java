@@ -70,7 +70,10 @@ public class Main {
     }
 
     public static void listarTarefas(ArrayList<Tarefa> listaTarefas) {
-        listaTarefas.forEach(System.out::println);
+        for (int i = 0; i < listaTarefas.size(); i++) {
+            System.out.println((i + 1) + " - " + listaTarefas.get(i)); // inicia os índices com 1
+        }
+
 
     }
 
@@ -80,17 +83,22 @@ public class Main {
         listarTarefas(listaTarefas); // mostra todas as tarefas
         int tarefaEscolhida = scanner.nextInt();
 
+        listaTarefas.get(tarefaEscolhida - 1).status = true;
+        System.out.println("Tarefa concluída com sucesso!");
+
 
     }
 
     public static void removerTarefa(ArrayList<Tarefa> listaTarefas) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o nome da tarefa a ser excluída: ");
-        String tarefaEscolhida = scanner.nextLine();
-        if (tarefaEscolhida.equals(listaTarefas)) {
-            listaTarefas.remove(tarefaEscolhida);
+        int tarefaEscolhida = scanner.nextInt();
+        if (tarefaEscolhida < 1 || tarefaEscolhida > listaTarefas.size()) {
+            System.out.println("Opção inválida");
         } else {
-            System.out.println("Tarefa não encontrada.");
+            listaTarefas.remove(tarefaEscolhida - 1); // subtração para remover os índices de forma correta. Se o usuário deletar a tarefa 1,
+            // ele estará na verdade deletando a tarefa 0, uma vez que um ArrayList inicia em 0.
+            System.out.println("Tarefa removida com sucesso!");
         }
 
 

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 public class Tarefa {
     String nomeTarefa;
-    int identificador;
     boolean status;
 
 
