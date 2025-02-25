@@ -31,17 +31,14 @@ public class Main {
 
                 case 2:
                     listarTarefas(listaTarefas);
-                    //listar
                     break;
 
                 case 3:
                     concluirTarefa(listaTarefas);
-
                     break;
 
                 case 4:
                     removerTarefa(listaTarefas);
-                    //remover tarefa
                     break;
 
                 case 5:
@@ -63,9 +60,10 @@ public class Main {
     public static void adicionarTarefa(ArrayList<Tarefa> listaTarefas) {
         Scanner scanner = new Scanner(System.in);
         String nomeTarefa;
+
         System.out.println("Digite o nome da tarefa: ");
         nomeTarefa = scanner.nextLine();
-        listaTarefas.add(new Tarefa(nomeTarefa, false));
+        listaTarefas.add(new Tarefa(nomeTarefa, false)); // adiciona uma nova tarefa com o status de conclusão como false
         System.out.println("Tarefa adicionada com sucesso");
     }
 
@@ -73,7 +71,6 @@ public class Main {
         for (int i = 0; i < listaTarefas.size(); i++) {
             System.out.println((i + 1) + " - " + listaTarefas.get(i)); // inicia os índices com 1
         }
-
 
     }
 
