@@ -25,6 +25,7 @@ public class Main {
 
             switch (opcao) {
                 case 1:
+
                     //cadastrar
                     System.out.println("Digite o nome do produto: ");
                     String nome = scanner.nextLine();

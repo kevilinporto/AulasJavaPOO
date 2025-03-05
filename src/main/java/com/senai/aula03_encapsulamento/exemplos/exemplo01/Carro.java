@@ -7,11 +7,11 @@ public class Carro {
         velocidade = 0;
     }
 
-    public int getVelocidade(){ // getter para obter a velocidade
+    public int getVelocidade(){
         return velocidade;
     }
 
-    public void setVelocidade(int velocidade){ //setter para mudar a velocidade
+    public void setVelocidade(int velocidade){
         if (velocidade >= 0){ //Regra de negócio: velocidade não pode ser negativa
             this.velocidade = velocidade;
         } else {

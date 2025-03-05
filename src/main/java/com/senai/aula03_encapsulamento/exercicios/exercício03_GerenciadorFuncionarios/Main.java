@@ -1,19 +1,19 @@
-package com.senai.aula03_encapsulamento.exercicios.exercicio02;
+package com.senai.aula03_encapsulamento.exercicios.exercício03_GerenciadorFuncionarios;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ContaBancaria conta1 = new ContaBancaria("Vitoria", 0);
+        Funcionario funcionario1 = new Funcionario("Gerente", 2000,"Vitoria");
 
         int opcao; // Declarando a variável antes do loop
 
         do {
             System.out.println("""
                 \nSelecione uma opção:
-                1 - Consultar saldo
-                2 - Depositar
+                1 - Consultar funcionário
+                2 - Alterar salário
                 3 - Sacar
                 4 - Sair
             """);
@@ -24,21 +24,15 @@ public class Main {
 
 
             switch (opcao){
-                case 1://consultar saldo
-                    System.out.println(conta1.getSaldo());
+                case 1:
                     break;
 
                 case 2:
-                    //depositar
-                    System.out.print("Digite o valor do depósito: ");
-                    conta1.depositar(scanner.nextDouble());
-                    scanner.nextLine();
-                    System.out.println("Saldo atual na conta: " + conta1.getSaldo());
+                    System.out.println("Digite o novo salário do funcionário " + funcionario1.getNome());
+                    funcionario1.alterarSalario(scanner.nextDouble());
                     break;
 
-                case 3: //sacar
-                    System.out.println("Digite o valor a ser sacado:");
-                    conta1.sacar(scanner.nextDouble());
+                case 3:
                     break;
 
                 case 4:
