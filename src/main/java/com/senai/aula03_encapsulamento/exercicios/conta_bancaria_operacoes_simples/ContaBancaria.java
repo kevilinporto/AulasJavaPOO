@@ -31,7 +31,7 @@ public class ContaBancaria {
     }
 
     public void depositar (double valor) {
-        if (valor >= 0) {
+        if (valor >= 0 && valor < saldo) {
             this.saldo = valor;
         } else {
             System.out.println("O depósito não pode ser negativo.");
