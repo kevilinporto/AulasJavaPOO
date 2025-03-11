@@ -6,7 +6,11 @@ public class ContaBancaria {
 
     public ContaBancaria(String titular, double saldo) { //constructor
         this.titular = titular;
-        this.saldo = saldo;
+        if(saldo >= 0){ //só é possivel alterar se saldo for maior que 0
+            this.saldo = saldo;
+        } else {
+            System.out.println("O saldo não pode iniciar negativo. Valor atribuido: R$O,O");
+        }
     }
 
     public String getTitular() {
@@ -21,20 +25,36 @@ public class ContaBancaria {
         return saldo;
     }
 
-    public void sacar (double valor) {
+    public boolean sacar (double valor) {
         if (valor <= saldo && valor > 0) {
             saldo -= valor;
-            System.out.println("Saque no valor de R$" + saldo + " realizado com sucesso.");
+            mensagemDeSucesso("Saque", this);
+            return true;
         } else {
             System.out.println("Saldo insuficiente.");
+            return false;
         }
     }
 
-    public void depositar (double valor) {
-        if (valor >= 0 && valor < saldo) {
-            this.saldo = valor;
+    public boolean depositar (double valor) {
+        if (valor > 0) {
+            saldo += valor;
+            mensagemDeSucesso("Deposito", this);
+            return true;
         } else {
-            System.out.println("O depósito não pode ser negativo.");
+            System.out.println("Operação inválida. O valor de depósito deve ser maior que R$0,0.");
+            return false;
+        }
+    }
+
+    public static void mensagemDeSucesso(String operacao, ContaBancaria minhaConta){
+        System.out.println(operacao + " na conta de " + minhaConta.titular + " realizado com sucesso. Saldo atual: R$" + minhaConta.saldo);
+
+    }
+
+    public void transferencia (double valor, ContaBancaria contaDestino){
+        if (this.sacar(valor)) { // verifica se há saldo na conta
+            contaDestino.depositar(valor);
         }
     }
 

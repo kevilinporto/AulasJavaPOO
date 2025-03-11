@@ -1,0 +1,47 @@
+Usa-se o extends para usar herança
+
+class Veiculo{
+    int ano;
+    String marca;
+}
+
+class Carro extends Veiculo{
+    int portas;
+}
+
+public Carro (String marca, int ano, int portas){
+    super(ano, marca); // Usa-se o super para chamar o construtor ou métodos da classe pai
+    this.portas = portas;
+}
+
+void exibirDetalhes(){
+    super.exibirDetalhes();
+    System.out.Print("Portas: " + portas);
+}
+
+
+class Moto extends Veiculo{
+    public Moto (String marca, int ano, boolean temPartidaEletrica){
+    super(marca, ano);
+    this.temPartidaEletrica = temPartidaEletrica;
+    }
+
+
+HERANÇA SIMPLES
+
+class A { }
+class B extends A { }   // B herda de A
+
+HERANÇA MULTINÍVEL
+
+class A { }
+class B extends A { }   // B herda de A
+class C extends B { }   // C herda de B
+
+HERANÇA HIERÁRQUICA
+
+class A { }
+class B extends A { }   //B herda de A
+class C extends A { }   //C herda de A
+
+Em Java não é possível fazer heranças múltiplas. Pode ser contornado com interfaces.
