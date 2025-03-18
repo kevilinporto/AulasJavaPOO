@@ -1,8 +1,8 @@
 package com.senai.aula04_heranca.exercicios.exercicio03_sistema_gestao_pedidos;
 
 public class Pedido {
-    protected int numPedido;
-    protected double valorTotal;
+    private int numPedido;
+    private double valorTotal;
 
     public Pedido(int numPedido, double valorTotal) {
         this.numPedido = numPedido;

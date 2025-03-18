@@ -10,8 +10,8 @@ public class Main {
         PedidoOnline pedidoOnline1 = new PedidoOnline(1, 28.90, 5);
         PedidoPresencial pedidoPresencial1 = new PedidoPresencial(2, 67.50, 10);
 
-        gerenciadorDePedidos.criarPedido(2222, 78);
-        gerenciadorDePedidos.criarPedido(3333, 20);
+        gerenciadorDePedidos.criarPedidoOnline(2222, 78, 10);
+        gerenciadorDePedidos.criarPedidoPresencial(3333, 20, 4);
         gerenciadorDePedidos.listarPedidos();
 
 
@@ -22,12 +22,13 @@ public class Main {
                     |   Bem-vindo ao gerenciador de pedidos    |
                     |                                          |
                     |       Selecione uma opção a seguir:      |
-                    | 1 - Cadastrar um pedido                  |
-                    | 2 - Listar todos os pedidos              |
-                    | 3 - Atualizar um pedido                  |
-                    | 4 - Remover um pedido                    |
-                    | 5 - Buscar produto pelo número           |
-                    | 6 - Sair                                 |
+                    | 1 - Cadastrar um pedido presencial       |
+                    | 2 - Cadastrar um pedido online           |
+                    | 3 - Listar todos os pedidos              |
+                    | 4 - Atualizar um pedido                  |
+                    | 5 - Remover um pedido                    |
+                    | 6 - Buscar produto pelo número           |
+                    | 7 - Sair                                 |
                     """);
             opcao = scanner.nextInt();
             scanner.nextLine();
@@ -41,35 +42,36 @@ public class Main {
                     System.out.println("Digite o valor total do pedido: ");
                     double valorTotal = scanner.nextDouble();
                     scanner.nextLine();
-                    gerenciadorDePedidos.criarPedido(numero, valorTotal);
+                    gerenciadorDePedidos.criarPedidoPresencial(numero, valorTotal, 10);
 
 
                     break;
                 case 2:
+                    break;
+                case 3:
                     gerenciadorDePedidos.listarPedidos();
                     //listar
                     break;
-                case 3:
+                case 4:
                     System.out.println("Digite o  número do pedido que quer atualizar: ");
                     int numeroPedido = scanner.nextInt();
-                    scanner.nextLine();
                     System.out.println("Digite o novo valor do pedido: ");
                     valorTotal = scanner.nextDouble();
                     gerenciadorDePedidos.atualizarPedido(numeroPedido, valorTotal);
                     //atualizar
                     break;
-                case 4:
+                case 5:
                     System.out.println("Digite o número do pedido a ser deletado: ");
                     int numPedido = scanner.nextInt();
                     scanner.nextLine();
                     gerenciadorDePedidos.removerPedido(numPedido);
                     //remover
                     break;
-                case 5:
+                case 6:
                     System.out.print("Pesquisa de produto: ");
                     //pesquisar
                     break;
-                case 6:
+                case 7:
                     System.out.println("Saindo...");
                     break;
                 default:
@@ -77,6 +79,6 @@ public class Main {
                     break;
             }
 
-        } while (opcao != 6);
+        } while (opcao != 7);
     }
 }

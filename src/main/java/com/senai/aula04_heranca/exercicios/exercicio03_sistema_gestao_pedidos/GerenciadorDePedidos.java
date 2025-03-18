@@ -12,10 +12,14 @@ public class GerenciadorDePedidos{
     }
 
 
-    public void criarPedido(int numeroPedido, double valorTotal){
-        Pedido novoPedido = new Pedido(numeroPedido, valorTotal);
-        listaPedidos.add(novoPedido);
+    public void criarPedidoPresencial(int numeroPedido, double valorTotal, double desconto){
+        PedidoPresencial novoPedidoPresencial = new PedidoPresencial(numeroPedido, valorTotal, desconto);
+        listaPedidos.add(novoPedidoPresencial);
         System.out.println("Novo pedido criado. Número do pedido: " + numeroPedido + ", valor total de R$" + valorTotal);
+    }
+
+    public void criarPedidoOnline(int numeroPedido, double valorTotal, double taxaDeEntrega){
+        PedidoOnline novoPedidoOnline = new PedidoOnline(numeroPedido, valorTotal, taxaDeEntrega);
     }
 
     public void listarPedidos(){
