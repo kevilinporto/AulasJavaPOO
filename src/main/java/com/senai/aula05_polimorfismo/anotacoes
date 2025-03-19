@@ -1,0 +1,40 @@
+O polimorfismo permite que um mesmo método tenha diferentes comportamentos dependendo do objeto que o invoca.
+
+- está diretamente ligado à herança
+
+Polimorfismo de compilação (sobrecarga de métodos):
+    a sobrecarga de métodos ocorre quando há mais de um método com
+    o mesmo nome na mesma classe, mas com assinaturas diferentes.
+
+    Regras da sobrecarga:
+    (obrigatório)
+    -métodos devem ter o mesmo nome
+    -devem ter parâmetros DIFERENTES (tipo, quantidade, ordem)
+
+    (não obrigatório)
+    -Podem ter diferentes modificadores de acesso
+    -Podem retornar diferentes tipos de valores, mas o retorno não
+    é critério para sobrecarga
+
+    O QUE DETERMINA A SOBRECARGA É O TIPO DE PARÂMETRO
+
+    - Permite que um único método tenha diferentes formas de
+    entrada sem precisar criar novos nomes de funções
+
+    - Evita duplicação de código
+
+
+Polimorfismo de execução:
+
+    - construtor inicializa atributos
+
+    A sobrescrita de métodos ocorre quando uma subclasse redefine um método que já existe na sua superclasse.
+    Isso permite que os objetos de diferentes subclasses possam implementar seus próprios comportamentos
+    específicos para o método.
+
+    REGRAS DA SOBRESCRITA:
+    -metodo na subclasse deve ter exatamente o mesmo nome e assinatura do método na superclasse.
+    -o tipo de retorno deve ser o mesmo ou um subtipo covariante (polimorfismo de retorno).
+    -o modificador de acesso nao pode ser mais restritivo que o do método na superclasse
+    -métodos final, static e private não podem ser sobrescritos.
+
