@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class GerenciadorProdutos {
     // Classe com todos os métodos gerenciadores de produto
 
-    ArrayList<Produto> listaProdutos;
+    public ArrayList<Produto> listaProdutos;
 
     public GerenciadorProdutos() { //construtor
         this.listaProdutos = new ArrayList<>();
