@@ -40,7 +40,8 @@ public class GerenciadorPacientes {
         PacienteParticular novoPacienteParticular = new PacienteParticular(nome, idade, custoCosulta);
         listaPacientes.add(novoPacienteParticular);
         System.out.println("Novo paciente conveniado adicionado:\n" + "Nome: " + nome + " | Idade: " + idade +
-                " | Paciente convêniado. Desconto de consulta: " + custoCosulta + "\n");
+                " | Paciente particular adicionado. Custo de consulta: " + custoCosulta + "\n");
 
     }
+
 }
