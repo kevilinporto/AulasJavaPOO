@@ -9,6 +9,5 @@ public class Main {
 
     public static void gerar(Relatorio relatorio){
         relatorio.gerar();
-
     }
 }

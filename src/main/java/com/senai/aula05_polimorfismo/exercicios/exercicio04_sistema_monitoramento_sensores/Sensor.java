@@ -2,4 +2,8 @@ package com.senai.aula05_polimorfismo.exercicios.exercicio04_sistema_monitoramen
 
 public class Sensor {
 
+    public void reportarValor(){
+        System.out.println("Relatório genérico");
+    }
+
 }

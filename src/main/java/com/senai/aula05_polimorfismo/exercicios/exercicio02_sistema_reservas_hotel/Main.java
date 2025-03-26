@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ReservaSimples reservaSimples1 = new ReservaSimples(600, 70);
-        ReservaVIP reservaVIP1 = new ReservaVIP(600, 1000);
+        ReservaVIP reservaVIP1 = new ReservaVIP(300, 1000);
 
         reservaSimples1.tipoReserva();
         reservaSimples1.calcularCusto();

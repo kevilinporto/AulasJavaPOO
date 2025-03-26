@@ -10,7 +10,7 @@ public class ProdutoServico extends Produto{
 
     @Override
     public double calcularPrecoFinal() {
-        double total = getPrecoProduto() + impostoServico;
+        double total = getPrecoProduto() + (getPrecoProduto() * impostoServico);
         return total;
     }
 

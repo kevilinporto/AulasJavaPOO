@@ -11,7 +11,7 @@ public class ProdutoFisico extends Produto{
 
     @Override
     public double calcularPrecoFinal() {
-        double total = getPrecoProduto() + impostoProdutoFisico;
+        double total = getPrecoProduto() + (getPrecoProduto() * impostoProdutoFisico);
         return total;
     }
 

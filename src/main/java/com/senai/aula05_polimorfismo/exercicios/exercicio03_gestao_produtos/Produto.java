@@ -23,6 +23,6 @@ public class Produto {
     }
 
     public double calcularPrecoFinal(){
-        return precoProduto * porcentagemImposto;
+        return precoProduto + (precoProduto * porcentagemImposto);
     }
 }

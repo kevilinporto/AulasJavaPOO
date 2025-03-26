@@ -7,22 +7,20 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         GerenciadorPacientes gerenciadorPacientes = new GerenciadorPacientes();
 
-        PacienteConvenio pacienteConvenio1 = new PacienteConvenio("Vitoria", 23, 40);
-        PacienteParticular pacienteParticular1 = new PacienteParticular("Kevilin", 18, 80);
 
         int opcao;
 
-        do { //MENU
+        do {
             System.out.println("""
-                    |   Bem-vindo ao gerenciador de produtos   |
-                    |                                          |
-                    |       Selecione uma opção a seguir:      |
-                    | 1 - Adicionar um paciente ao sistema     |
-                    | 2 - Listar todos os pacientes            |
-                    | 3 - Atualizar a quantidade de um produto |
-                    | 4 - Remover um produto                   |
-                    | 5 - Buscar produto pelo nome             |
-                    | 6 - Sair                                 |
+                    |        Bem-vindo ao gerenciador de pacientes         |
+                    |                                                      |
+                    |            Selecione uma opção a seguir:             |
+                    |                                                      |
+                    | 1 - Adicionar um paciente ao sistema                 |
+                    | 2 - Listar todos os pacientes                        |
+                    | 3 - Remover um paciente da lista                     |
+                    | 4 - Consultar paciente específico                    |
+                    | 5 - Sair                                             |
                     """);
             opcao = scanner.nextInt();
             scanner.nextLine();
@@ -65,25 +63,27 @@ public class Main {
                     System.out.println("Todos os pacientes cadastrados no sistema:\n");
                     gerenciadorPacientes.listaPacientes.forEach(System.out::println);
                     break;
-                case 3:
 
+                case 3: //remover conveniado
+                    System.out.println("Digite o nome do paciente a ser removido da lista:");
+                    gerenciadorPacientes.removerPaciente();
                     break;
                 case 4:
-
+                    System.out.println("Digite o nome do paciente a ser consultado: ");
+                    gerenciadorPacientes.buscarPaciente();
                     break;
                 case 5:
-                    System.out.print("Pesquisa de produto: ");
-                    //pesquisar
+                    System.out.println("placeholder2");
                     break;
                 case 6:
                     System.out.println("Saindo...");
                     break;
                 default:
-                    System.out.println("Opção inválida. Digite novamente.");
+                    System.out.println("Opção inválida. Digite novamente.\n");
                     break;
             }
 
-        } while (opcao != 6);
+        } while (opcao != 5);
 
 
     }

@@ -9,7 +9,8 @@ public class AuxilioTransporte extends Beneficio{
     @Override
     public double calcularDesconto() {
         double totalDesconto = getValorBeneficio() - (getValorBeneficio() * getPorcentagemDesconto());
-        System.out.println(totalDesconto);
+        double salarioLiquido = getSalario() - totalDesconto;
+        System.out.println("Desconto de R$" + totalDesconto + " do salário de R$" + getSalario() + ". Salário líquido R$" + salarioLiquido);
         return totalDesconto;
     }
 }

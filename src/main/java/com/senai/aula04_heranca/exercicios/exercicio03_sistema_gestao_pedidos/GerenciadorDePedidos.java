@@ -1,7 +1,5 @@
 package com.senai.aula04_heranca.exercicios.exercicio03_sistema_gestao_pedidos;
 
-import com.senai.aula02_colecoes.exercicios.exercicio02.Produto;
-
 import java.util.ArrayList;
 
 public class GerenciadorDePedidos{

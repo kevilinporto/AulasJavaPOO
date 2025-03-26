@@ -1,4 +1,4 @@
-package com.senai.aula02_colecoes.exercicios.exercicio02;
+package com.senai.aula02_colecoes.exercicios.exercicio02_gerenciador_produtos;
 
 import java.util.ArrayList;
 

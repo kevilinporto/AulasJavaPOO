@@ -27,6 +27,8 @@ public class GerenciadorPacientes {
                 " | Paciente convêniado. Desconto de consulta: " + descontoConsulta + "\n");
 
     }
+
+
     public void adicionarPacienteParticular(){
         double custoCosulta = 80;
 
@@ -43,5 +45,37 @@ public class GerenciadorPacientes {
                 " | Paciente particular adicionado. Custo de consulta: " + custoCosulta + "\n");
 
     }
+
+    public void removerPaciente(){
+        buscarPaciente();
+        boolean encontrado = false;
+        String nome = scanner.nextLine();
+        for (Paciente paciente : listaPacientes){
+            if(paciente.getNome().equalsIgnoreCase(nome)){
+                encontrado = true;
+                listaPacientes.remove(paciente);
+                System.out.println("Paciente conveniado " + nome + " removido com sucesso!");
+                break;
+            }
+        }
+        if(!encontrado){
+            System.out.println("Paciente conveniado não encontrado.");
+        }
+    }
+
+    public void buscarPaciente(){
+        boolean encontrado = false;
+        String nome = scanner.nextLine();
+        for (Paciente paciente : listaPacientes){
+            if (paciente.getNome().equalsIgnoreCase(nome)){
+                System.out.println("Paciente encontrado: \n" + paciente);
+                encontrado = true;
+            }
+        }
+        if (!encontrado){
+            System.out.println("Paciente não encontrado no sistema.");
+        }
+    }
+
 
 }
