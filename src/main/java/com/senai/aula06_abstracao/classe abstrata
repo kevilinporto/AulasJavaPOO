@@ -1,0 +1,33 @@
+Abstração permite a criação de classes que servem como modelos para outras
+classes, ocultando detalhes internos e expondo apenas funcionalidades essenciais.
+
+Em Java, esse conceito é aplicado principalmente por meio de classes abstratas e
+interfaces.
+
+Você interage com métodos públicos sem se preocupar com os detalhes internos da
+implementação.
+
+- CLASSES ABSTRATAS
+
+Uma classe abstrata em Java é uma classe que não pode ser instanciada diretamente e
+serve como um modelo genérico pra outras classes.
+
+    PODE CONTER:
+
+    - métodos abstratos (sem implementação): obrigam as subclasses a fornecer uma
+    implementação específica. Um método sem implementação tem apenas assinaturas.
+    Define o que tem que fazer, mas não como deve fazer. Quem implementa é quem herda.
+
+
+    - métodos concretos (com implementação): podem ser herdados por subclasses sem
+    necessidade de reimplementação.
+
+    - atributos: atributos comuns podem ser compartilhados pelas subclasses.
+
+    - construtores: podem ser utilizados pelas subclasses para inicialização de
+    atributos.
+
+
+O objetivo de uma classe abstrata é fornecer uma base para a criação de subclasses que
+compartilham características comuns, ao mesmo tempo que permite a personalização de
+comportamentos específicos.

@@ -1,0 +1,17 @@
+Uma interface pode ser vista como um contrato ou um modelo que especifíca
+métodos que uma classe concreta devem implementar. Ela define somente as
+assinaturas dos métodos sem detalhar a implementação.
+
+    uma interface também não pode ser instanciada diretamente.
+
+    Todos os métodos são por padrão:
+        - public
+        - abstract
+        - podem conter atributos, mas todos são obrigatoriamente constantes
+        (public static final)
+        - uma interface não pode ter construtores (pois não é instanciável
+        diretamente)
+
+    OS ATRIBUTOS DAS INTERFACES SÃO CONSTANTES
+
+    permite herança múltipla
