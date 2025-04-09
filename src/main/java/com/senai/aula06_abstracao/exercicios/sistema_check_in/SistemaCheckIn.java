@@ -7,6 +7,10 @@ public interface SistemaCheckIn {
     double PESO_MAX_BAGAGENS_INTER = 10;
     double PESO_MAX_BAGAGENS_NACIO = 20;
 
+    static void mensagemBoasVindas(){
+        System.out.println("Boas vindas ao sistema de check-in da Fly-Secure!");
+    }
+
     default void realizarCheckIn(){
         System.out.println("Check-in realizado com sucesso!");
     }
@@ -72,13 +76,7 @@ public interface SistemaCheckIn {
 
     }
 
-    static void mensagemCheckIn(){
-        System.out.println("Check-in seguro realizado realizado pela Fly-Secure");
-    }
 
-    static void mensagemBoasVindas(){
-        System.out.println("Boas vindas ao sistema de check-in da Fly-Secure!");
-    }
 
 
 }

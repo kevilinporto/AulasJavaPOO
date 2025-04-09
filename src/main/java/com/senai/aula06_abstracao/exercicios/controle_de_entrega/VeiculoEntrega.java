@@ -15,5 +15,7 @@ public abstract class VeiculoEntrega {
 
     abstract void verificarDistancia();
 
-    abstract void aumentarVelocidade();
+    abstract void tempoEstimado();
+
+    abstract void aumentarVelocidade(double incrementoVelocidade);
 }
