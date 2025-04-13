@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CompanhiaAerea companhia = new CompanhiaAerea();
+        CompanhiaAerea latam = new CompanhiaAerea();
 
         SistemaCheckIn.mensagemBoasVindas();
 
@@ -24,15 +24,15 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    companhia.validarDocumentos();
+                    latam.validarDocumentos();
                 break;
 
                 case 2:
-                    companhia.emitirCartaoEmbarque();
+                    latam.emitirCartaoEmbarque();
                 break;
 
                 case 3:
-                    companhia.checarPesoBagagem(scanner);
+                    latam.checarPesoBagagem(scanner);
                 break;
 
                 case 4:
