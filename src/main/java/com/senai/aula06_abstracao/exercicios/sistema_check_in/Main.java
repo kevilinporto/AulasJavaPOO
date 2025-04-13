@@ -5,43 +5,33 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CompanhiaAerea companhiaAerea1 = new CompanhiaAerea();
+        CompanhiaAerea companhia = new CompanhiaAerea();
+
         SistemaCheckIn.mensagemBoasVindas();
 
         int opcao;
         do {
             System.out.println("""
-                    |       Selecione uma opção a seguir:      |
-                    |                                          |
-                    | 1 - Realizar check-in                    |
-                    | 2 - Validar documentos                   |
-                    | 3 - Emitir cartão de embarque            |
-                    | 4 - Verificar peso de bagagem            |
-                    | 5 - Sair                                 |
+                    |       Selecione uma opção:              |
+                    |                                         |
+                    | 1 - Validar documentos                 |
+                    | 2 - Emitir cartão de embarque          |
+                    | 3 - Verificar peso da bagagem          |
+                    | 4 - Sair                               |
                     """);
             opcao = scanner.nextInt();
             scanner.nextLine();
 
             switch (opcao) {
-                case 1:
-                    companhiaAerea1.realizarCheckIn();
-                    break;
-                case 2:
-                    companhiaAerea1.validarDocumentos();
-                    break;
-                case 3:
-                    companhiaAerea1.emitirCartaoEmbarque();
-                    break;
-                case 4:
-                    companhiaAerea1.checarPesoBagagem();
-                    break;
-                case 5:
-                    System.out.println("Encerrando o programa...");
-                    break;
-                default:
-                    break;
+                case 1 -> companhia.validarDocumentos();
+                case 2 -> companhia.emitirCartaoEmbarque();
+                case 3 -> companhia.checarPesoBagagem(scanner);
+                case 4 -> System.out.println("Encerrando o programa...");
+                default -> System.out.println("Opção inválida.");
             }
 
-        } while (opcao != 5);
+        } while (opcao != 4);
+
+        scanner.close();
     }
 }
