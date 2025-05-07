@@ -31,7 +31,7 @@ public class Main {
 
             if(opcao!=7){
                 System.out.println("""
-                            Tipo de usuario: 
+                            Tipo de usuario:
                                 1 - Operador
                                 2 - Supervisor
                             """);
@@ -72,6 +72,7 @@ public class Main {
                     }
 
                     break;
+
                 case 2:
                     if (escolhaTipo == 1){
                         operadorController.listarOperadores().forEach(System.out::println);
@@ -96,6 +97,7 @@ public class Main {
                         }
                     }
                     break;
+
                 case 3:
                     if (escolhaTipo == 1){
                         operadorController.listarOperadores().forEach(System.out::println);
@@ -132,6 +134,7 @@ public class Main {
                         }
                     }
                     break;
+
                 case 4:
                     if (escolhaTipo == 1){
                         operadorController.listarOperadores().forEach(System.out::println);

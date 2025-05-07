@@ -1,0 +1,9 @@
+MODEL -> Tudo o que representa o software, como entidades
+CONTROLLER -> Media os dados recebidos do view para que o model trate-os
+
+operadorDAO tem a lista de todos os operadores
+
+LAMBDA (Função simplificada)
+(parâmetros) -> {ação a ser executada com o parâmetro}
+
+O iterator cria uma cópia dos itens para iterar sobre eles

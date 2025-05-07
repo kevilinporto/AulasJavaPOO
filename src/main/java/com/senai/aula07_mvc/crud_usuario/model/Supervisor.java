@@ -7,4 +7,12 @@ public class Supervisor extends Usuario{
         super(nome, id);
         this.area = area;
     }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
 }
