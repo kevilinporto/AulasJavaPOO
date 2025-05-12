@@ -27,7 +27,7 @@ public class Main {
         do {
             System.out.println(menu);
             opcao = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); //limpa o buffer
 
             if(opcao!=7){
                 System.out.println("""

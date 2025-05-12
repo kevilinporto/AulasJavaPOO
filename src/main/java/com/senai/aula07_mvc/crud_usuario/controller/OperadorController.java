@@ -6,7 +6,7 @@ import com.senai.aula07_mvc.crud_usuario.model.OperadorDAO;
 import java.util.List;
 
 public class OperadorController {
-    OperadorDAO operadorDAO = new OperadorDAO(); //Instância de operadorDAO no controller
+    OperadorDAO operadorDAO = new OperadorDAO(); //Instância de operadorDAO no controller de operador
 
     public List<Operador> listarOperadores(){
         return operadorDAO.listar();

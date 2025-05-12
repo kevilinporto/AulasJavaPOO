@@ -8,6 +8,12 @@ public class Supervisor extends Usuario{
         this.area = area;
     }
 
+    @Override
+    public String toString() {
+        return String.format("ID: %d, Nome: %s, Área: %s",
+                super.getId(), super.getNome(), area);
+    }
+
     public String getArea() {
         return area;
     }

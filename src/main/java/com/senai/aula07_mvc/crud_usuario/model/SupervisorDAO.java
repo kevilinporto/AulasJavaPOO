@@ -20,7 +20,7 @@ public class SupervisorDAO {
 
     private List<Supervisor> carregar() {
         try (FileReader reader = new FileReader(FILE_PATH)) {
-            Type listType = new TypeToken<ArrayList<Operador>>() {
+            Type listType = new TypeToken<ArrayList<Supervisor>>() {
             }.getType(); //Verifica o tipo de estrutura
             return gson.fromJson(reader, listType); //Busca do json com um leitor(reader), converte e retorna uma lista
         } catch (IOException e) {
@@ -32,11 +32,9 @@ public class SupervisorDAO {
         supervisores = carregar();
     }
 
-    public List<Supervisor> listar(Supervisor supervisor ){
-        List<Supervisor> lista = new ArrayList<>();
-        return lista;
+    public List<Supervisor> listar() { //metodo que retorna a lista de operadores
+        return supervisores;
     }
-
     public void salvar(Supervisor supervisor) {
         supervisores.add(supervisor);
         salvarJson();
@@ -50,9 +48,6 @@ public class SupervisorDAO {
         }
     }
 
-    public List<Supervisor> listar() { //metodo que retorna a lista de supervisores
-        return supervisores;
-    }
 
     public void atualizar(Supervisor supervisor) {
         supervisores.forEach(o -> { //itera sobre cada um dos itens da lista e joga para Operador o
